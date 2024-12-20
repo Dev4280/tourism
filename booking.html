@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Booking Form Header */
+        header.booking {
+            background: url('images/pexels-davide-robetti-1119720888-29761759.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow-y: scroll;
+        }
+
+        header.booking h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #3d3a3a;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Form Container */
+        form.form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            height: 110vh;
+            margin-top: 20px;
+        }
+
+        /* Form Fields */
+        form.form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        form.form label input,
+        form.form label select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Gender Radio Buttons */
+        form.form label.gender {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Space between options */
+        margin-bottom: 10px;
+    }
+
+    form.form label.gender input[type="radio"] {
+        width: auto; /* Prevent full-width radio buttons */
+        margin: 0 5px 0 0; /* Adjust spacing around radio buttons */
+    }
+
+        /* Checkbox */
+        form.form label.terms {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between checkbox and text */
+        font-size: 1.1rem; /* Increase text size */
+        margin-top: 10px;
+    }
+
+    form.form label.terms input[type="checkbox"] {
+        transform: scale(1.5); /* Increase checkbox size */
+        margin: 0;
+    }
+
+        /* Button Styles */
+        form.form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form.form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Form Legend */
+        form.form legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Horizontal Line */
+        form.form hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header.booking h1 {
+                font-size: 2rem;
+            }
+
+            form.form {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="booking">
+    <form  class="form">
+        <h1><b>booking Form</b></h1>
+        <legend>personal information</legend>
+        <label for="first name">First Name   :<input type="text" placeholder="enter your first name" required></label>
+        <label for="last name">Last Name    :<input type="text" placeholder="enter your last name" required></label>
+        <label for="email">Email        :<input type="email" placeholder="enter your email" required></label>
+        <label for="address">Address      :<input type="address" placeholder="enter your address" required></label>
+        <label for="phone number">phone number :<input type="number" placeholder="enter your phone number"></label>
+        <label class="gender">
+            Gender:
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </label>
+        <label for="count">passengers   :<input type="number" placeholder="enter the number of passengers"></label>
+        <label for="date">travel date  :<input type="date" placeholder="enter the travel date"></label>
+        <label for="branches"> Available at:
+               <select name="state" >
+                <option value="  "> </option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Delhi">Delhi</option>
+             </select>
+            </label>
+            <label class="terms">
+                <input type="checkbox" required> I agree to the terms and conditions
+            </label>
+        <label><button>submit</button></label>
+       <hr>
+    </form>
+  
+    </header>
+    
+</body>
+</html>
